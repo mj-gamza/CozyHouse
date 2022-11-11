@@ -166,7 +166,7 @@
                         <!-- 개별주문상품 시작 -->                  
                         					<div th:if="${#lists.size(orderDetailList)>0}" th:each="orderDetailDto : ${orderDetailList}">  
                                             <div class="product-order-detail" th:if="${#strings.equals(orderDto.orderNum, orderDetailDto.orderDto.orderNum)}" >
-                                                <a href="product-left.html" class="order-image">
+                                                <a th:href="@{/itemDetail(itemNum=${orderDetailDto.itemDto.itemNum})}" class="order-image">
                                                     <img th:src="@{|/assets/img/${orderDetailDto.itemDto.itemImage1}|}" class="blur-up lazyloaded-mypageorder" alt="">
                                                 </a>
 
