@@ -1,4 +1,4 @@
-# 🏠CozyHouse
+# 🏠예쁜 템들이 모여사는 :: CozyHouse
 Final Project - CozyHouse
 
 ---
