@@ -5,8 +5,13 @@
      minute = second * 60,
      hour = minute * 60,
      day = hour * 24;
+ 
+ var tomorrow = new Date();
+ tomorrow = new Date(tomorrow.setDate(tomorrow.getDate()+1));
 
- var countDown = new Date("Nov 15, 2022 00:00:00").getTime(),
+ tomorrow.setHours(0,0,0,0);
+ 
+ var countDown = tomorrow.getTime(),
      x = setInterval(function () {
          var now = new Date().getTime(),
              distance = countDown - now;
