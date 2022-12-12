@@ -3,10 +3,9 @@ package com.exe.cozy.security;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.exe.cozy.domain.CartDto;
-import com.exe.cozy.mapper.CartMapper;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -15,13 +14,12 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import com.exe.cozy.domain.CartDto;
 import com.exe.cozy.domain.CustomerDto;
+import com.exe.cozy.mapper.CartMapper;
 import com.exe.cozy.mapper.CustomerMapper;
-import com.exe.cozy.service.CustomerService;
 
 import lombok.RequiredArgsConstructor;
-
-import javax.servlet.http.HttpSession;
 
 @RequiredArgsConstructor
 @Service("securityService")
